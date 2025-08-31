@@ -34,3 +34,26 @@ footer{background:#fff}
   .hero-image{ margin-top: .75rem; }
   .hero-image img{ width: 100%; height: auto; display:block; border-radius: 20px; }
 }
+/* Dimensioni immagine hero desktop */
+.hero-image{
+  display:flex;
+  justify-content:flex-end;
+  align-items:flex-end;
+}
+.hero-image img{
+  width: min(420px, 40vw);  /* limita la larghezza massima */
+  height: auto;
+  object-fit: contain;      /* evita deformazioni */
+}
+
+/* Spaziatura e dimensioni su mobile */
+@media (max-width: 992px){
+  .hero{ grid-template-columns: 1fr; }
+  .hero-image{ justify-content:center; margin-top: 1rem; }
+  .hero-image img{ width: min(520px, 88vw); } /* più grande ma contenuta */
+}
+@media (max-width: 576px){
+  .hero{ padding: 2rem 0; gap: 1rem; }
+  .hero h1{ font-size: 2rem; line-height: 1.2; }
+  .hero p{ font-size: 1rem; }
+}
