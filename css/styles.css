@@ -114,3 +114,12 @@ body{background:#ffffff;background:var(--bg);color:#0f172a;color:var(--text)}
   .hero .row{ grid-template-columns: 1fr 100px; }
   .hero .col-image img{ max-width: 100px; }
 }
+/* Fix sticky navbar */
+.navbar.sticky-top{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1040;
+  background: rgba(255,255,255,.95) !important; /* evita trasparenze quando si sovrappone al contenuto */
+  backdrop-filter: saturate(180%) blur(6px);
+}
