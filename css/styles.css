@@ -66,3 +66,21 @@ body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans
 /* Safari fallback colors */
 body{background:#ffffff;background:var(--bg);color:#0f172a;color:var(--text)}
 .btn-brand{background:#0ea5e9;color:#ffffff}
+/* Immagine mobile ancorata all'H1 */
+.hero-image-mobile{ float:right; margin:0 0 .5rem .75rem; }
+.hero-image-mobile img{
+  width:115px; max-width:115px; height:auto;
+  object-fit:contain; border-radius:16px;
+  box-shadow:0 8px 24px rgba(2,6,23,.06);
+}
+
+/* Mantieni la versione desktop come prima */
+.hero-image img{
+  max-width:100%; height:auto; display:block;
+  border-radius:18px; box-shadow:0 10px 30px rgba(2,6,23,.05);
+}
+
+/* Fine-tuning su telefoni molto piccoli */
+@media (max-width:360px){
+  .hero-image-mobile img{ width:100px; max-width:100px; }
+}
