@@ -24,3 +24,13 @@ input:focus,textarea:focus{outline:none;border-color:var(--brand);box-shadow:0 0
 .form-card{border:1px solid #e5e7eb;border-radius:1rem;padding:1.25rem}
 .small-muted{color:var(--muted);font-size:.9rem}
 footer{background:#fff}
+/* Fix mobile hero */
+@media (max-width: 576px){
+  .hero{ padding: 2rem 0; gap: 1rem; }
+  .badge-soft{ display:inline-block; margin-bottom: .75rem; }
+  .hero h1{ font-size: 2rem; line-height: 1.15; margin: 0 0 .75rem; }
+  .hero p{ font-size: 1rem; margin-bottom: .75rem; }
+  .d-flex.gap-2.mt-3{ flex-wrap: wrap; row-gap: .5rem; }
+  .hero-image{ margin-top: .75rem; }
+  .hero-image img{ width: 100%; height: auto; display:block; border-radius: 20px; }
+}
