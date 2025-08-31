@@ -136,3 +136,15 @@ body{ padding-top: 64px; }
 @media (max-width: 576px){
   body{ padding-top: 56px; }
 }
+/* Padding laterale per CV e Contatti */
+main.container.section{
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+@media (max-width: 576px){
+  main.container.section{
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
