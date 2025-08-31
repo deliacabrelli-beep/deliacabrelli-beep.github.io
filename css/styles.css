@@ -84,3 +84,21 @@ body{background:#ffffff;background:var(--bg);color:#0f172a;color:var(--text)}
 @media (max-width:360px){
   .hero-image-mobile img{ width:100px; max-width:100px; }
 }
+/* Mantieni testo + immagine affiancati anche su mobile */
+@media (max-width: 767px) {
+  .hero .row {
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  .hero .col-12 {
+    flex: 1 1 50%; /* metà schermo ciascuno */
+    max-width: 50%;
+  }
+  .hero-image img {
+    width: 100%;
+    height: auto;
+  }
+}
+
