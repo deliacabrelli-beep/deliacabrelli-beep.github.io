@@ -85,33 +85,32 @@ body{background:#ffffff;background:var(--bg);color:#0f172a;color:var(--text)}
   .hero-image-mobile img{ width:100px; max-width:100px; }
 }
 /* Mantieni testo + immagine affiancati anche su mobile */
+/* Hero mobile: testo + immagine affiancati, con margini giusti */
 @media (max-width: 767px) {
-  .hero .row {
-    display: flex;
-    flex-direction: row !important;
+  .hero.container{ padding-left: 20px; padding-right: 20px; }
+
+  .hero .row{
+    display: grid;
+    grid-template-columns: 1fr 120px; /* testo | immagine */
+    column-gap: 16px;
     align-items: center;
-    flex-wrap: nowrap;
   }
-  .hero .col-12 {
-    flex: 1 1 50%; /* metà schermo ciascuno */
-    max-width: 50%;
-  }
-  .hero-image img {
+
+  .hero .col-text{ padding-right: 6px; }
+  .hero .col-image{ display: block; }
+
+  .hero .col-image img{
     width: 100%;
+    max-width: 120px;
     height: auto;
-  }
-}
-/* Aggiusta margini/padding su mobile */
-@media (max-width: 767px) {
-  .hero .col-12 {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  .hero h1,
-  .hero p,
-  .hero .badge-soft {
-    margin-left: 10px;
-    margin-right: 10px;
+    object-fit: contain;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(2,6,23,.06);
   }
 }
 
+/* telefoni piccolissimi */
+@media (max-width: 360px){
+  .hero .row{ grid-template-columns: 1fr 100px; }
+  .hero .col-image img{ max-width: 100px; }
+}
