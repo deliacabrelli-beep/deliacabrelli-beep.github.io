@@ -173,6 +173,22 @@ body {
       &:focus {
         border-color: $brand;
         box-shadow: 0 0 0 .2rem rgba($brand, .15);
+        /* più margine interno ai lati su mobile */
+@media (max-width: 576px) {
+  .container {
+    padding-left: 1.8rem;  /* prima era ~1rem */
+    padding-right: 1.8rem;
+  }
+
+  .badge-soft {
+    margin-bottom: 1rem;   /* distanzia badge da H1 */
+  }
+
+  .hero h1 {
+    margin-top: 0.2rem;    /* micro aggiustamento */
+  }
+}
+
       }
     }
   }
