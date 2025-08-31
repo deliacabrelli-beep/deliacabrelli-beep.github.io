@@ -101,4 +101,17 @@ body{background:#ffffff;background:var(--bg);color:#0f172a;color:var(--text)}
     height: auto;
   }
 }
+/* Aggiusta margini/padding su mobile */
+@media (max-width: 767px) {
+  .hero .col-12 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .hero h1,
+  .hero p,
+  .hero .badge-soft {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
 
