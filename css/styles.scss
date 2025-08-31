@@ -53,3 +53,65 @@ body {
   .grid-2 { grid-template-columns: 1fr; }
 }
 @media (max-width: 992px){ .grid-2 { grid-template-columns: 1fr; } }
+/* --- TWEAK MOBILE HERO & BADGE --- */
+@media (max-width: 576px) {
+  /* pill: testo più grande e centrato nel box */
+  .badge-soft{
+    font-size: .95rem;         /* prima era più piccola */
+    line-height: 1.2;
+    padding: .5rem .9rem;
+    border-radius: 999px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  /* allinea e riduci immagine: niente taglio né “gigante” */
+  .hero .row{ 
+    align-items: center; 
+    column-gap: 12px;          /* un po’ di spazio tra testo e foto */
+  }
+  .hero-image{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    overflow: visible;         /* evita qualsiasi crop del contenitore */
+  }
+  .hero-image img{
+    width: 115px;              /* prima 140px: meno invadente */
+    max-width: 115px;          
+    height: auto;
+    object-fit: contain;       /* mai tagliata */
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(2,6,23,.06);
+    margin-left: 8px;
+  }
+
+  /* bottoni più proporzionati allo schermo piccolo */
+  .btn{
+    padding: .6rem .95rem;
+    font-size: .95rem;
+    border-radius: .75rem;
+  }
+  .btn-brand{
+    padding: .6rem .95rem;     /* stesso sizing del primario */
+    font-size: .95rem;
+  }
+  .btn-outline-secondary{
+    padding: .6rem .95rem;
+    font-size: .95rem;
+  }
+
+  /* un filo più di respiro all’hero */
+  .hero.container{
+    padding-left: 26px !important;
+    padding-right: 26px !important;
+  }
+}
+
+/* telefoni very-small (es. 320–360px) */
+@media (max-width: 360px){
+  .hero-image img{ width: 100px; max-width:100px; }
+  .badge-soft{ font-size: .9rem; padding: .45rem .8rem; }
+  .btn, .btn-brand, .btn-outline-secondary{ font-size: .9rem; }
+}
