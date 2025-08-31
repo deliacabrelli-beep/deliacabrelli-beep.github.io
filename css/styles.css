@@ -123,3 +123,16 @@ body{background:#ffffff;background:var(--bg);color:#0f172a;color:var(--text)}
   background: rgba(255,255,255,.95) !important; /* evita trasparenze quando si sovrappone al contenuto */
   backdrop-filter: saturate(180%) blur(6px);
 }
+/* NAVBAR FISSA IN ALTO (robusta su tutti i browser) */
+.navbar.fixed-top{
+  z-index: 1040;
+  background: rgba(255,255,255,.95) !important;
+  backdrop-filter: saturate(180%) blur(6px);
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Spazio sotto la navbar fissa per non farla sovrapporre ai contenuti */
+body{ padding-top: 64px; }
+@media (max-width: 576px){
+  body{ padding-top: 56px; }
+}
