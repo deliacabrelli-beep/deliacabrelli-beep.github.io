@@ -15,7 +15,7 @@ body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans
 .bg-tint{background:var(--tint)}
 .small-muted{color:var(--muted)}
 
-/* NAVBAR fixed (hamburger attivo anche su Contatti) */
+/* NAVBAR fixed (sticky) */
 .navbar.fixed-top{
   z-index:1040;
   background:rgba(255,255,255,.95)!important;
@@ -31,7 +31,7 @@ body{padding-top:64px}
 .btn-brand{background:var(--brand);color:#fff;border:none;padding:.85rem 1.15rem;border-radius:.8rem;font-weight:600}
 .hero-image img{max-width:100%;height:auto;display:block;border-radius:18px;box-shadow:0 10px 30px rgba(2,6,23,.05)}
 
-/* HERO mobile: testo + immagine affiancati con margini */
+/* HERO mobile layout */
 @media (max-width:767px){
   .hero.container{padding-left:22px;padding-right:22px}
   .hero .row{display:grid;grid-template-columns:1fr 132px;column-gap:16px;align-items:center}
@@ -45,6 +45,7 @@ body{padding-top:64px}
 
 /* GRID & CARDS */
 .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem}
+@media (max-width:768px){ .grid-2{grid-template-columns:1fr !important} }
 .card-clean{border:1px solid #e5e7eb;border-radius:1rem;background:#fff;padding:1.25rem;position:relative}
 .card-clean.accent-left::before{content:"";position:absolute;left:-1px;top:-1px;bottom:-1px;width:6px;background:#34d399;border-radius:1rem 0 0 1rem}
 .card-clean.accent-left.purple::before{background:#a78bfa}
@@ -68,120 +69,16 @@ body{padding-top:64px}
 .form-control:focus{border-color:var(--brand);box-shadow:0 0 0 .2rem rgba(14,165,233,.15)}
 .privacy{color:#6b7280}
 
-/* CV page: miglior tipografia e griglia icone */
+/* CV icons grid */
 .bi{vertical-align:-.125em}
 .cv-icons{display:grid;grid-template-columns:repeat(3,minmax(120px,1fr));gap:.75rem}
 .cv-icons .card-clean{display:flex;align-items:center;gap:.6rem;padding:.8rem}
 .cv-icons i{font-size:1.1rem;color:var(--brand)}
+@media (max-width:576px){ .cv-icons{grid-template-columns:repeat(2,minmax(120px,1fr))} }
 
-/* Padding laterale extra per pagine senza hero */
+/* Pagine interne padding */
 main.container.section{padding-left:24px;padding-right:24px}
 @media (max-width:576px){main.container.section{padding-left:18px;padding-right:18px}}
 
-
-/* Fix: projects stack on mobile */
-@media (max-width: 767px){
-  .grid-2{grid-template-columns:1fr}
-}
-
-/* Fix: CV avatar not cropped weirdly */
-.cv-avatar{
-  border-radius:50%;
-  object-fit:cover;
-  object-position:center 20%;
-}
-
-/* Fix: CV icons better wrapping and centering */
-.cv-icons{display:grid;grid-template-columns:repeat(3,minmax(140px,1fr));gap:.75rem}
-@media (max-width: 767px){
-  .cv-icons{grid-template-columns:repeat(2,minmax(140px,1fr))}
-}
-.cv-icons .card-clean{display:flex;align-items:center;justify-content:flex-start;gap:.6rem;padding:.8rem;min-height:52px}
-.cv-icons .card-clean span{overflow-wrap:break-word;word-break:break-word}
-
-/* Timeline styles */
-.timeline{position:relative;margin:0;padding-left:1.25rem;list-style:none}
-.timeline::before{content:"";position:absolute;left:.25rem;top:0;bottom:0;width:2px;background:#e5e7eb}
-.timeline-item{position:relative;margin-bottom:1.1rem}
-.timeline-item::before{content:"";position:absolute;left:-.15rem;top:.3rem;width:.65rem;height:.65rem;border-radius:50%;background:#0ea5e9;box-shadow:0 0 0 4px #e6f6fd}
-.timeline-item .when{color:#6b7280;font-size:.95rem}
-
-/* Mobile: project cards one per row */
-@media (max-width: 768px){
-  .grid-2{ grid-template-columns: 1fr !important; }
-}
-
-/* CV icons: better wrapping and centering on small screens */
-.cv-icons .card-clean span{ flex:1; white-space:normal; word-break:break-word; }
-@media (max-width:576px){
-  .cv-icons{ grid-template-columns: repeat(2, minmax(120px,1fr)); }
-}
-
-
-/* Timeline for CV */
-.timeline{ position:relative; padding-left:1rem; border-left:2px solid #e5e7eb; }
-.timeline .t-item{ position:relative; margin-bottom:1rem; }
-.timeline .t-item::before{ content:""; position:absolute; left:-9px; top:.35rem; width:10px; height:10px; background:var(--brand); border-radius:50%; }
-.timeline .period{ font-weight:600; color:var(--muted); }
-
-
-/* CV timeline refinements */
-.timeline{ position:relative; padding-left:1.25rem; border-left:2px solid #e5e7eb; }
-.timeline .t-item{ position:relative; margin-bottom:1rem; padding-left:.75rem; }
-.timeline .t-item::before{
-  content:""; position:absolute; left:-7px; top:.45rem;
-  width:10px; height:10px; background:var(--brand);
-  border:2px solid #fff; border-radius:50%;
-  box-shadow:0 0 0 1px #e5e7eb;
-}
-/* ===== CV avatar: dimensioni corrette, niente testa tagliata ===== */
-.cv-avatar{
-  width:72px !important;
-  height:72px !important;
-  border-radius:50%;
-  object-fit:contain;           /* mostra tutta la foto nel cerchio */
-  object-position:top center;
-  background:#fff;
-  border:1px solid #e5e7eb;
-}
-@media (max-width:576px){
-  .cv-avatar{ width:64px !important; height:64px !important; }
-}
-
-/* ===== CV timeline: linea dedicata + puntini fuori dal testo ===== */
-.timeline{
-  position:relative;
-  padding-left:1.75rem;         /* sposta il testo a destra della linea/puntini */
-}
-
-/* linea verticale indipendente: niente più border-left che “balla” */
-.timeline::before{
-  content:"";
-  position:absolute;
-  left:10px;                    /* distanza dal bordo sinistro del contenitore */
-  top:0;
-  bottom:0;
-  width:2px;
-  background:#e5e7eb;
-}
-
-/* ogni item ha un po’ di aria e puntino allineato alla linea */
-.timeline .t-item{
-  position:relative;
-  margin:0 0 1rem 0;
-  padding-left:.5rem;           /* micro stacco fra puntino e testo */
-}
-
-/* puntino centrato sulla linea, con bordino per staccarlo */
-.timeline .t-item::before{
-  content:"";
-  position:absolute;
-  left:6px;                     /* in coppia con left:10px della linea */
-  top:.55rem;                   /* allineamento con la prima riga del testo */
-  width:10px;
-  height:10px;
-  background:var(--brand);
-  border:2px solid #fff;
-  border-radius:50%;
-  box-shadow:0 0 0 1px #e5e7eb;
-}
+/* No legacy timeline visuals */
+.timeline, .timeline::before, .timeline .t-item, .timeline .t-item::before{ all:unset; }
