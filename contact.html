@@ -71,3 +71,50 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 </body>
 </html>
+<!-- FORM CARD -->
+<div class="form-card">
+  <form id="contact-form">
+    <div class="mb-3">
+      <label for="name" class="form-label">Nome e cognome *</label>
+      <input type="text" id="name" name="name" class="form-control" placeholder="Es. Maria Rossi" required>
+    </div>
+    <div class="mb-3">
+      <label for="company" class="form-label">Azienda (opzionale)</label>
+      <input type="text" id="company" name="company" class="form-control" placeholder="Es. Clickable">
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email *</label>
+      <input type="email" id="email" name="email" class="form-control" placeholder="nome@azienda.it" required>
+    </div>
+    <div class="mb-3">
+      <label for="subject" class="form-label">Oggetto *</label>
+      <input type="text" id="subject" name="subject" class="form-control" placeholder="Es. Brief landing page" required>
+    </div>
+    <div class="mb-3">
+      <label for="message" class="form-label">Messaggio *</label>
+      <textarea id="message" name="message" class="form-control" rows="5" placeholder="Raccontami di cosa hai bisogno..." required></textarea>
+    </div>
+    <button type="submit" class="btn btn-brand">Invia</button>
+  </form>
+  <p class="privacy small-muted mt-2">Privacy: i tuoi dati non verranno pubblicati. Il form utilizza EmailJS per l’invio sicuro.</p>
+</div>
+
+<!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init("_A8aj4Z-OGaoeH-el"); // qui metti la tua PUBLIC KEY
+  })();
+
+  document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm("service_v6jk4h2", "template_5wr3brr", this)
+      .then(function() {
+        alert("Messaggio inviato con successo! Ti risponderò presto.");
+      }, function(error) {
+        alert("Errore nell'invio, riprova più tardi.");
+        console.log("Errore:", error);
+      });
+  });
+</script>
