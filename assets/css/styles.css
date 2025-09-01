@@ -77,3 +77,49 @@ body{padding-top:64px}
 /* Padding laterale extra per pagine senza hero */
 main.container.section{padding-left:24px;padding-right:24px}
 @media (max-width:576px){main.container.section{padding-left:18px;padding-right:18px}}
+
+
+/* Fix: projects stack on mobile */
+@media (max-width: 767px){
+  .grid-2{grid-template-columns:1fr}
+}
+
+/* Fix: CV avatar not cropped weirdly */
+.cv-avatar{
+  border-radius:50%;
+  object-fit:cover;
+  object-position:center 20%;
+}
+
+/* Fix: CV icons better wrapping and centering */
+.cv-icons{display:grid;grid-template-columns:repeat(3,minmax(140px,1fr));gap:.75rem}
+@media (max-width: 767px){
+  .cv-icons{grid-template-columns:repeat(2,minmax(140px,1fr))}
+}
+.cv-icons .card-clean{display:flex;align-items:center;justify-content:flex-start;gap:.6rem;padding:.8rem;min-height:52px}
+.cv-icons .card-clean span{overflow-wrap:break-word;word-break:break-word}
+
+/* Timeline styles */
+.timeline{position:relative;margin:0;padding-left:1.25rem;list-style:none}
+.timeline::before{content:"";position:absolute;left:.25rem;top:0;bottom:0;width:2px;background:#e5e7eb}
+.timeline-item{position:relative;margin-bottom:1.1rem}
+.timeline-item::before{content:"";position:absolute;left:-.15rem;top:.3rem;width:.65rem;height:.65rem;border-radius:50%;background:#0ea5e9;box-shadow:0 0 0 4px #e6f6fd}
+.timeline-item .when{color:#6b7280;font-size:.95rem}
+
+/* Mobile: project cards one per row */
+@media (max-width: 768px){
+  .grid-2{ grid-template-columns: 1fr !important; }
+}
+
+/* CV icons: better wrapping and centering on small screens */
+.cv-icons .card-clean span{ flex:1; white-space:normal; word-break:break-word; }
+@media (max-width:576px){
+  .cv-icons{ grid-template-columns: repeat(2, minmax(120px,1fr)); }
+}
+
+
+/* Timeline for CV */
+.timeline{ position:relative; padding-left:1rem; border-left:2px solid #e5e7eb; }
+.timeline .t-item{ position:relative; margin-bottom:1rem; }
+.timeline .t-item::before{ content:""; position:absolute; left:-9px; top:.35rem; width:10px; height:10px; background:var(--brand); border-radius:50%; }
+.timeline .period{ font-weight:600; color:var(--muted); }
