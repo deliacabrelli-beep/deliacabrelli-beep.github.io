@@ -148,3 +148,22 @@ main.container.section{
     padding-right: 18px;
   }
 }
+/* --- CV header avatar (niente testa tagliata) --- */
+.cv-hero{
+  display:grid;
+  grid-template-columns:auto 1fr;
+  align-items:center;
+  gap:16px;
+}
+.cv-avatar{
+  width:96px;
+  height:96px;
+  border-radius:50%;
+  object-fit:contain;           /* non ritaglia */
+  object-position:top center;   /* “ancorato” verso l’alto */
+  background:#fff;
+  border:1px solid #e5e7eb;
+}
+@media (max-width:576px){
+  .cv-avatar{ width:84px; height:84px; }
+}
