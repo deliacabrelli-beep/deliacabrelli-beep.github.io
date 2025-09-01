@@ -167,3 +167,26 @@ main.container.section{
 @media (max-width:576px){
   .cv-avatar{ width:84px; height:84px; }
 }
+/* --- CV timeline: niente sovrapposizione tra dot e testo --- */
+.timeline{
+  position:relative;
+  padding-left:1.5rem;          /* più spazio tra linea e testo */
+  border-left:2px solid #e5e7eb;
+}
+.timeline .t-item{
+  position:relative;
+  margin-bottom:1.25rem;
+  padding-left:.75rem;          /* margine interno per allontanare il testo dal dot */
+}
+.timeline .t-item::before{
+  content:"";
+  position:absolute;
+  left:-1.05rem;                /* centra il dot sulla linea verticale */
+  top:.55rem;                   /* allineamento verticale con la prima riga */
+  width:10px;
+  height:10px;
+  background:var(--brand);
+  border:2px solid #fff;
+  border-radius:50%;
+  box-shadow:0 0 0 1px #e5e7eb; /* bordino esterno per staccarlo dallo sfondo */
+}
