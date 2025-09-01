@@ -134,3 +134,54 @@ main.container.section{padding-left:24px;padding-right:24px}
   border:2px solid #fff; border-radius:50%;
   box-shadow:0 0 0 1px #e5e7eb;
 }
+/* ===== CV avatar: dimensioni corrette, niente testa tagliata ===== */
+.cv-avatar{
+  width:72px !important;
+  height:72px !important;
+  border-radius:50%;
+  object-fit:contain;           /* mostra tutta la foto nel cerchio */
+  object-position:top center;
+  background:#fff;
+  border:1px solid #e5e7eb;
+}
+@media (max-width:576px){
+  .cv-avatar{ width:64px !important; height:64px !important; }
+}
+
+/* ===== CV timeline: linea dedicata + puntini fuori dal testo ===== */
+.timeline{
+  position:relative;
+  padding-left:1.75rem;         /* sposta il testo a destra della linea/puntini */
+}
+
+/* linea verticale indipendente: niente più border-left che “balla” */
+.timeline::before{
+  content:"";
+  position:absolute;
+  left:10px;                    /* distanza dal bordo sinistro del contenitore */
+  top:0;
+  bottom:0;
+  width:2px;
+  background:#e5e7eb;
+}
+
+/* ogni item ha un po’ di aria e puntino allineato alla linea */
+.timeline .t-item{
+  position:relative;
+  margin:0 0 1rem 0;
+  padding-left:.5rem;           /* micro stacco fra puntino e testo */
+}
+
+/* puntino centrato sulla linea, con bordino per staccarlo */
+.timeline .t-item::before{
+  content:"";
+  position:absolute;
+  left:6px;                     /* in coppia con left:10px della linea */
+  top:.55rem;                   /* allineamento con la prima riga del testo */
+  width:10px;
+  height:10px;
+  background:var(--brand);
+  border:2px solid #fff;
+  border-radius:50%;
+  box-shadow:0 0 0 1px #e5e7eb;
+}
