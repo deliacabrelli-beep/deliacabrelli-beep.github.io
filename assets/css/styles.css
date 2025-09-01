@@ -82,3 +82,21 @@ main.container.section{padding-left:24px;padding-right:24px}
 
 /* No legacy timeline visuals */
 .timeline, .timeline::before, .timeline .t-item, .timeline .t-item::before{ all:unset; }
+/* --- CV: chip colorati con icone --- */
+.tag {
+  display: inline-flex; align-items: center; gap: .35rem;
+  font-weight: 600; font-size: .85rem;
+  padding: .35rem .6rem; border-radius: 999px; 
+  border: 1px solid #e5e7eb; background: #fff;
+}
+.tag i { font-size: 1rem; }
+
+/* palette chip */
+.tag.mint   { border-color: rgba(52,211,153,.35); background: rgba(52,211,153,.12); color: #065f46; }
+.tag.lilac  { border-color: rgba(167,139,250,.35); background: rgba(167,139,250,.12); color: #553c9a; }
+.tag.orange { border-color: rgba(245,158,11,.35); background: rgba(245,158,11,.12); color: #7c4a03; }
+.tag.brand  { border-color: rgba(14,165,233,.35); background: rgba(14,165,233,.12); color: #075985; }
+
+/* titoli di sezione con emoji ben allineate */
+.h-with-emoji { display: inline-flex; align-items: center; gap: .5rem; }
+.h-with-emoji .e { font-size: 1.15em; line-height: 1; }
