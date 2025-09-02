@@ -82,3 +82,23 @@ main.container.section{padding-left:24px;padding-right:24px}
 
 /* No legacy timeline visuals */
 .timeline, .timeline::before, .timeline .t-item, .timeline .t-item::before{ all:unset; }
+/* Fix griglia competenze su mobile */
+.cv-icons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: .75rem;
+}
+
+/* Righe di testo lunghe non devono uscire dal box */
+.cv-icons .card-clean {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .8rem;
+  word-wrap: break-word;
+  white-space: normal;
+}
+.cv-icons .card-clean span {
+  font-size: .9rem;
+  line-height: 1.2;
+}
