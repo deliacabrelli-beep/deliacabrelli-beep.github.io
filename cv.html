@@ -5,84 +5,133 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CV di Delia Cabrelli: Project Manager & Content Specialist</title>
   <meta name="description" content="Curriculum aggiornato con esperienze, formazione, certificazioni e competenze di Delia Cabrelli. Project Manager, Content Specialist e SEO Copywriter.">
+
+  <!-- Bootstrap + Icons (CDN) -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Il tuo CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css?v=4">
 </head>
 <body>
-<nav class="navbar navbar-expand-md fixed-top bg-white shadow-sm" aria-label="Navigazione principale">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="index.html">Delia Cabrelli</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbars"
-            aria-controls="navbars" aria-expanded="false" aria-label="Apri menu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbars">
-      <ul class="navbar-nav ms-auto mb-2 mb-md-0">
-        <li class="nav-item"><a class="nav-link" href="index.html#progetti">Progetti</a></li>
-        <li class="nav-item"><a class="nav-link active" aria-current="page" href="cv.html">CV</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contattami</a></li>
-      </ul>
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-md fixed-top bg-white shadow-sm" aria-label="Navigazione principale">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Delia Cabrelli</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbars"
+              aria-controls="navbars" aria-expanded="false" aria-label="Apri menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbars">
+        <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+          <li class="nav-item"><a class="nav-link" href="index.html#progetti">Progetti</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="cv.html">CV</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contattami</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<main class="container section">
-  <header class="mb-4">
-    <h1 class="mb-1">CV</h1>
-    <p class="small-muted mb-0"><strong>Project Manager · Content Specialist · SEO Copywriter · Content Creator</strong> — Clickable (giugno 2023 – oggi)</p>
-  </header>
+  <main class="container section">
+    <header class="mb-4">
+      <h1 class="mb-1">CV</h1>
+      <p class="small-muted mb-0">
+        <strong>Project Manager · Content Specialist · SEO Copywriter · Content Creator</strong>
+        — Clickable (giugno 2023 – oggi)
+      </p>
+    </header>
 
-  <section class="mb-5">
-    <h2 class="h4 mb-3">Esperienze</h2>
-    <div class="card-clean mb-2">
-      <h3 class="h6 mb-1">Clickable S.r.l. — Project Manager / Content Specialist / SEO Copywriter</h3>
-      <p class="small-muted mb-1">Bologna · Giugno 2023 – Oggi</p>
+    <!-- ESPERIENZE -->
+    <section class="mb-5">
+      <h2 class="h4 mb-3 h-with-emoji"><span class="e">🔹</span>Esperienze</h2>
+
+      <div class="card-clean mb-2">
+        <h3 class="h6 mb-1">Clickable S.r.l. — Project Manager / Content Specialist / SEO Copywriter</h3>
+        <span class="tag brand"><i class="bi bi-briefcase"></i> Progetti digital</span>
+        <p class="mb-1 small-muted">Bologna · Giugno 2023 – Oggi</p>
+        <ul class="mb-0">
+          <li>Pianificazione e coordinamento di progetti content e web.</li>
+          <li>UX writing e microcopy per pagine marketing e landing B2B.</li>
+          <li>SEO copywriting: keyword research, struttura Hn, meta, on-page.</li>
+        </ul>
+      </div>
+
+      <div class="card-clean mb-2">
+        <h3 class="h6 mb-1">Università di Bologna — Academic Tutor</h3>
+        <span class="tag lilac"><i class="bi bi-people"></i> Tutorato accademico</span>
+        <p class="small-muted mb-0">Novembre 2022 – Ottobre 2023</p>
+      </div>
+
+      <div class="card-clean mb-2">
+        <h3 class="h6 mb-1">Università di Modena e Reggio Emilia — Academic Tutor</h3>
+        <span class="tag lilac"><i class="bi bi-people"></i> Tutorato accademico</span>
+        <p class="small-muted mb-0">Gennaio 2020 – Novembre 2022</p>
+      </div>
+
+      <div class="card-clean mb-2">
+        <h3 class="h6 mb-1">Biblioteca “Giorgio R. Franci” — Collaborazione</h3>
+        <span class="tag mint"><i class="bi bi-journal-bookmark"></i> Attività bibliotecaria</span>
+        <p class="small-muted mb-0">Febbraio 2022 – Aprile 2023</p>
+      </div>
+
+      <div class="card-clean mb-2">
+        <h3 class="h6 mb-1">Vegamigos — Community Manager</h3>
+        <span class="tag orange"><i class="bi bi-chat-dots"></i> Community & Social</span>
+        <p class="small-muted mb-0">Gennaio 2021 – Novembre 2021</p>
+      </div>
+
+      <div class="card-clean mb-2">
+        <h3 class="h6 mb-1">Concorto Film Festival — Social Media Producer</h3>
+        <span class="tag orange"><i class="bi bi-camera-reels"></i> Produzione social</span>
+        <p class="small-muted mb-0">Agosto 2020</p>
+      </div>
+
+      <div class="card-clean mb-2">
+        <h3 class="h6 mb-1">Pervenio S.r.l. — Community Manager</h3>
+        <span class="tag orange"><i class="bi bi-chat-dots"></i> Community & Social</span>
+        <p class="small-muted mb-0">Ottobre 2019 – Dicembre 2019</p>
+      </div>
+    </section>
+
+    <!-- FORMAZIONE -->
+    <section class="mb-5">
+      <h2 class="h4 mb-3 h-with-emoji"><span class="e">🎓</span>Formazione</h2>
       <ul class="mb-0">
-        <li>Pianificazione e coordinamento di progetti content e web.</li>
-        <li>UX writing e microcopy per pagine marketing e landing B2B.</li>
-        <li>SEO copywriting: keyword research, struttura Hn, meta, on‑page.</li>
+        <li><strong>Laurea Magistrale in Semiotica, con lode</strong> — Università di Bologna (2024)</li>
+        <li><strong>Laurea Triennale in Scienze della Comunicazione, con lode</strong> — UNIMORE (2021)</li>
       </ul>
-    </div>
-    <div class="card-clean mb-2"><h3 class="h6 mb-1">Università di Bologna — Academic Tutor</h3><p class="small-muted mb-0">Novembre 2022 – Ottobre 2023</p></div>
-    <div class="card-clean mb-2"><h3 class="h6 mb-1">Università di Modena e Reggio Emilia — Academic Tutor</h3><p class="small-muted mb-0">Gennaio 2020 – Novembre 2022</p></div>
-    <div class="card-clean mb-2"><h3 class="h6 mb-1">Biblioteca “Giorgio R. Franci” — Collaborazione</h3><p class="small-muted mb-0">Febbraio 2022 – Aprile 2023</p></div>
-    <div class="card-clean mb-2"><h3 class="h6 mb-1">Vegamigos — Community Manager</h3><p class="small-muted mb-0">Gennaio 2021 – Novembre 2021</p></div>
-    <div class="card-clean mb-2"><h3 class="h6 mb-1">Concorto Film Festival — Social Media Producer</h3><p class="small-muted mb-0">Agosto 2020</p></div>
-    <div class="card-clean mb-0"><h3 class="h6 mb-1">Pervenio S.r.l. — Community Manager</h3><p class="small-muted mb-0">Ottobre 2019 – Dicembre 2019</p></div>
-  </section>
+    </section>
 
-  <section class="mb-5">
-    <h2 class="h4 mb-3">Formazione</h2>
-    <ul class="mb-0">
-      <li><strong>Laurea Magistrale in Semiotica, con lode</strong> — Università di Bologna (2024)</li>
-      <li><strong>Laurea Triennale in Scienze della Comunicazione, con lode</strong> — UNIMORE (2021)</li>
-    </ul>
-  </section>
+    <!-- CERTIFICAZIONI -->
+    <section class="mb-5">
+      <h2 class="h4 mb-3 h-with-emoji"><span class="e">🏅</span>Certificazioni</h2>
+      <ul class="mb-0">
+        <li>Cambridge English — B1 (2014)</li>
+        <li>Managing Conflict & Managing Change — Università di Milano (2017)</li>
+        <li>Google — Digital Excellence (2017)</li>
+        <li>Videomaking Workshop — VideoLab8, SD Factory Lab (2023)</li>
+      </ul>
+    </section>
 
-  <section class="mb-5">
-    <h2 class="h4 mb-3">Certificazioni</h2>
-    <ul class="mb-0">
-      <li>Cambridge English — B1 (2014)</li>
-      <li>Managing Conflict & Managing Change — Università di Milano (2017)</li>
-      <li>Google — Digital Excellence (2017)</li>
-      <li>Videomaking Workshop — VideoLab8, SD Factory Lab (2023)</li>
-    </ul>
-  </section>
+    <!-- COMPETENZE -->
+    <section>
+      <h2 class="h4 mb-3 h-with-emoji"><span class="e">✨</span>Competenze</h2>
+      <div class="cv-icons">
+        <div class="card-clean"><i class="bi bi-clipboard-check"></i><span>Project management 🗂️</span></div>
+        <div class="card-clean"><i class="bi bi-pencil-square"></i><span>UX writing & Microcopy ✍️</span></div>
+        <div class="card-clean"><i class="bi bi-search"></i><span>SEO copywriting 🔎</span></div>
+        <div class="card-clean"><i class="bi bi-bezier"></i><span>Content strategy 🎯</span></div>
+        <div class="card-clean"><i class="bi bi-wordpress"></i><span>WordPress ⚙️</span></div>
+        <div class="card-clean"><i class="bi bi-film"></i><span>Suite Adobe · DaVinci/Premiere 🎬</span></div>
+      </div>
+    </section>
+  </main>
 
-  <section class="mb-5">
-    <h2 class="h4 mb-3">Competenze</h2>
-    <div class="cv-icons">
-      <div class="card-clean"><span>Project management</span></div>
-      <div class="card-clean"><span>UX writing & Microcopy</span></div>
-      <div class="card-clean"><span>SEO copywriting</span></div>
-      <div class="card-clean"><span>Content strategy</span></div>
-      <div class="card-clean"><span>WordPress</span></div>
-      <div class="card-clean"><span>Suite Adobe · DaVinci/Premiere</span></div>
-    </div>
-  </section>
-</main>
+  <footer class="py-4 mt-5 border-top">
+    <div class="container small">© <script>document.write(new Date().getFullYear())</script> Delia Cabrelli</div>
+  </footer>
 
-<footer class="py-4 mt-5 border-top"><div class="container small">© 2025 Delia Cabrelli</div></footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
