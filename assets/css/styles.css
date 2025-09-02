@@ -102,3 +102,35 @@ main.container.section{padding-left:24px;padding-right:24px}
   font-size: .9rem;
   line-height: 1.2;
 }
+/* --- FIX: testo lungo nei box Competenze (CV) --- */
+.cv-icons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* box un filo più larghi */
+  gap: .75rem;
+}
+
+.cv-icons .card-clean {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .8rem;
+  flex-wrap: wrap;              /* consenti andare a capo */
+}
+
+.cv-icons .card-clean i {
+  flex: 0 0 auto;               /* l’icona resta compatta */
+}
+
+.cv-icons .card-clean span {
+  flex: 1 1 0;                  /* il testo occupa lo spazio disponibile */
+  min-width: 0;                 /* fondamentale per permettere il wrapping in flex */
+  overflow-wrap: anywhere;      /* forza a capo se necessario */
+  word-break: break-word;
+  hyphens: auto;
+  line-height: 1.25;
+}
+
+/* telefoni molto piccoli: riduci leggermente il font */
+@media (max-width: 400px){
+  .cv-icons .card-clean span { font-size: .9rem; }
+}
